@@ -292,6 +292,7 @@ public class SinglyLinkedList<E> implements Cloneable {
     public static void main(String[] args) {
         SinglyLinkedList<Integer> list1 = new SinglyLinkedList<>();
         SinglyLinkedList<Integer> list2 = new SinglyLinkedList<>();
+
         list1.addLast(1); list1.addLast(2); list1.addLast(3);
         list2.addLast(4); list2.addLast(5); list2.addLast(6);
 
