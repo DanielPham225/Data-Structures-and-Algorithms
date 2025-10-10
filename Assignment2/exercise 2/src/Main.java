@@ -9,18 +9,18 @@ public class Main {
         for (int n : sizes) {
             double[] x = generateRandomArray(n);
 
-            long startTime1 = System.currentTimeMillis();
+            long startTime1 = System.nanoTime();
             prefixAverage1(x);
-            long endTime1 = System.currentTimeMillis();
+            long endTime1 = System.nanoTime();
             long elapsed1 = endTime1 - startTime1;
 
-            long startTime2 = System.currentTimeMillis();
+            long startTime2 = System.nanoTime();
             prefixAverage2(x);
-            long endTime2 = System.currentTimeMillis();
+            long endTime2 = System.nanoTime();
             long elapsed2 = endTime2 - startTime2;
 
-            System.out.println("prefixAverage1 time = " + elapsed1 + " ms");
-            System.out.println("prefixAverage2 time = " + elapsed2 + " ms");
+            System.out.println("prefixAverage1 time = " + elapsed1 + " nano");
+            System.out.println("prefixAverage2 time = " + elapsed2 + " nano");
         }
     }
 
