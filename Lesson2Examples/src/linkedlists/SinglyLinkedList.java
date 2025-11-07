@@ -21,45 +21,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package linkedlists;
-
-/**
- * A basic singly linked list implementation.
- *
- * @author Michael T. Goodrich
- * @author Roberto Tamassia
- * @author Michael H. Goldwasser
- */
 public class SinglyLinkedList<E> implements Cloneable {
-  //---------------- nested Node class ----------------
-  /**
-   * Node of a singly linked list, which stores a reference to its
-   * element and to the subsequent node in the list (or null if this
-   * is the last node).
-   */
   private static class Node<E> {
 
-    /** The element stored at this node */
     private E element;            // reference to the element stored at this node
 
-    /** A reference to the subsequent node in the list */
     private Node<E> next;         // reference to the subsequent node in the list
-
-    /**
-     * Creates a node with the given element and next node.
-     *
-     * @param e  the element to be stored
-     * @param n  reference to a node that should follow the new node
-     */
     public Node(E e, Node<E> n) {
       element = e;
       next = n;
     }
 
-    // Accessor methods
-    /**
-     * Returns the element stored at the node.
-     * @return the element stored at the node
-     */
     public E getElement() { return element; }
 
     /**
@@ -90,11 +62,7 @@ public class SinglyLinkedList<E> implements Cloneable {
   /** Constructs an initially empty list. */
   public SinglyLinkedList() { }              // constructs an initially empty list
 
-  // access methods
-  /**
-   * Returns the number of elements in the linked list.
-   * @return number of elements in the linked list
-   */
+
   public int size() { return size; }
 
   /**
@@ -220,18 +188,5 @@ public class SinglyLinkedList<E> implements Cloneable {
     sb.append(")");
     return sb.toString();
   }
-  //main method
-  public static void main(String[] args)
-  {
-	  
-	  SinglyLinkedList<String> list = new SinglyLinkedList<String>();
-	  list.addFirst("MSP");
-	  list.addLast("ATL");
-	  list.addLast("BOS");
-	  //
-	  list.addFirst("LAX");
-	  System.out.println(list);
-	  //
-  }
-  
+
 }
